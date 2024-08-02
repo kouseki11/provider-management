@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DepositController;
+use App\Http\Controllers\WithdrawController;
 use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +23,10 @@ Route::post('/members', [MemberController::class,'store'])->name('admin.members.
 Route::get('/members/{user}/edit', [MemberController::class,'edit'])->name('admin.members.edit');
 Route::put('/members/{user}', [MemberController::class,'update'])->name('admin.members.update');
 Route::delete('/members/{user}', [MemberController::class,'destroy'])->name('admin.members.destroy');
+
+Route::get('/deposit', [DepositController::class,'index'])->name('admin.transactions.deposit');
+Route::post('/deposit', [DepositController::class,'store'])->name('admin.transactions.deposit.store');
+Route::put('/deposit/{transaction}/{status}', [DepositController::class,'update'])->name('admin.transactions.deposit.update');
+
+Route::get('/withdraw', [WithdrawController::class,'index'])->name('admin.transactions.withdraw');
+Route::post('/withdraw', [WithdrawController::class,'store'])->name('admin.transactions.withdraw.store');

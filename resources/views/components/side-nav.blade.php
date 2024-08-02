@@ -35,7 +35,7 @@
                     </a>
                     <ul class="side-menu__sub">
                         <li>
-                            <a href="#"
+                            <a href="{{ route('admin.transactions.deposit') }}"
                                 class="side-menu">
                                 <div class="side-menu__icon">
                                     <i data-tw-merge="" data-lucide="dollar-sign" class="stroke-1.5 w-5 h-5"></i>
@@ -46,7 +46,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="side-menu">
+                            <a href="{{ route('admin.transactions.withdraw') }}" class="side-menu">
                                 <div class="side-menu__icon">
                                     <i data-tw-merge="" data-lucide="credit-card" class="stroke-1.5 w-5 h-5"></i>
                                 </div>

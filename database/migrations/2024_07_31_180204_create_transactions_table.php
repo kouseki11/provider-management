@@ -17,7 +17,6 @@ return new class extends Migration
             $table->char('nominal', 15);
             $table->enum('type', ['deposit', 'withdraw']);
             $table->enum('status', ['pending', 'approved', 'rejected']);
-            $table->foreignId('provider_id')->nullable()->constrained('game_providers');
             $table->timestamps();
         });
     }

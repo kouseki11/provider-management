@@ -85,6 +85,10 @@
                                         EMAIL
                                     </th>
                                     <th data-tw-merge=""
+                                    class="font-medium px-5 py-3 dark:border-darkmode-300 whitespace-nowrap border-b-0">
+                                    BALANCE
+                                </th>
+                                    <th data-tw-merge=""
                                         class="font-medium px-5 py-3 dark:border-darkmode-300 whitespace-nowrap border-b-0 text-center">
                                         ACTIONS
                                     </th>
@@ -111,6 +115,10 @@
                                     <td data-tw-merge=""
                                         class="px-5 py-3 border-b dark:border-darkmode-300 box rounded-l-none rounded-r-none border-x-0 shadow-[5px_3px_5px_#00000005] first:rounded-l-[0.6rem] first:border-l last:rounded-r-[0.6rem] last:border-r dark:bg-darkmode-600">
                                         {{ $user->email }}
+                                    </td>
+                                    <td data-tw-merge=""
+                                        class="px-5 py-3 border-b dark:border-darkmode-300 box rounded-l-none rounded-r-none border-x-0 shadow-[5px_3px_5px_#00000005] first:rounded-l-[0.6rem] first:border-l last:rounded-r-[0.6rem] last:border-r dark:bg-darkmode-600">
+                                        Rp{{ $user->balance ?  number_format($user->balance->balance, 0, ',', '.') : '0' }}
                                     </td>
                                     <td data-tw-merge=""
                                         class="px-5 py-3 border-b dark:border-darkmode-300 box rounded-l-none rounded-r-none border-x-0 text-center shadow-[5px_3px_5px_#00000005] first:rounded-l-[0.6rem] first:border-l last:rounded-r-[0.6rem] last:border-r dark:bg-darkmode-600">

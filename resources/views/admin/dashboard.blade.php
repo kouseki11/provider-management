@@ -26,46 +26,25 @@
                                         Reload Data
                                     </a>
                                 </div>
-                                <div class="mt-5 grid grid-cols-12 gap-6">
+                                <div class="mt-5 grid grid-cols-8 gap-6">
                                     <div class="intro-y col-span-12 sm:col-span-6 xl:col-span-3">
                                         <div
                                             class="relative zoom-in before:box before:absolute before:inset-x-3 before:mt-3 before:h-full before:bg-slate-50 before:content-['']">
                                             <div class="box p-5">
                                                 <div class="flex">
-                                                    <i data-tw-merge="" data-lucide="shopping-cart"
+                                                    <i data-tw-merge="" data-lucide="users"
                                                         class="stroke-1.5 h-[28px] w-[28px] text-primary"></i>
-                                                    <div class="ml-auto">
+                                                    {{-- <div class="ml-auto">
                                                         <div data-placement="top" title="33% Higher than last month"
                                                             class="tooltip cursor-pointer flex items-center rounded-full bg-success py-[3px] pl-2 pr-1 text-xs font-medium text-white">
                                                             33%
                                                             <i data-tw-merge="" data-lucide="chevron-up"
                                                                 class="stroke-1.5 ml-0.5 h-4 w-4"></i>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
-                                                <div class="mt-6 text-3xl font-medium leading-8">4.710</div>
-                                                <div class="mt-1 text-base text-slate-500">Item Sales</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="intro-y col-span-12 sm:col-span-6 xl:col-span-3">
-                                        <div
-                                            class="relative zoom-in before:box before:absolute before:inset-x-3 before:mt-3 before:h-full before:bg-slate-50 before:content-['']">
-                                            <div class="box p-5">
-                                                <div class="flex">
-                                                    <i data-tw-merge="" data-lucide="credit-card"
-                                                        class="stroke-1.5 h-[28px] w-[28px] text-pending"></i>
-                                                    <div class="ml-auto">
-                                                        <div data-placement="top" title="2% Lower than last month"
-                                                            class="tooltip cursor-pointer flex items-center rounded-full bg-danger py-[3px] pl-2 pr-1 text-xs font-medium text-white">
-                                                            2%
-                                                            <i data-tw-merge="" data-lucide="chevron-down"
-                                                                class="stroke-1.5 ml-0.5 h-4 w-4"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-6 text-3xl font-medium leading-8">3.721</div>
-                                                <div class="mt-1 text-base text-slate-500">New Orders</div>
+                                                <div class="mt-6 text-3xl font-medium leading-8">{{ $user }}</div>
+                                                <div class="mt-1 text-base text-slate-500">Total Member</div>
                                             </div>
                                         </div>
                                     </div>
@@ -75,19 +54,19 @@
                                             <div class="box p-5">
                                                 <div class="flex">
                                                     <i data-tw-merge="" data-lucide="monitor"
-                                                        class="stroke-1.5 h-[28px] w-[28px] text-warning"></i>
-                                                    <div class="ml-auto">
-                                                        <div data-placement="top" title="12% Higher than last month"
+                                                        class="stroke-1.5 h-[28px] w-[28px] text-success"></i>
+                                                    {{-- <div class="ml-auto">
+                                                        <div data-placement="top" title="22% Higher than last month"
                                                             class="tooltip cursor-pointer flex items-center rounded-full bg-success py-[3px] pl-2 pr-1 text-xs font-medium text-white">
-                                                            12%
+                                                            22%
                                                             <i data-tw-merge="" data-lucide="chevron-up"
                                                                 class="stroke-1.5 ml-0.5 h-4 w-4"></i>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
-                                                <div class="mt-6 text-3xl font-medium leading-8">2.149</div>
+                                                <div class="mt-6 text-3xl font-medium leading-8">0</div>
                                                 <div class="mt-1 text-base text-slate-500">
-                                                    Total Products
+                                                    Total Provider
                                                 </div>
                                             </div>
                                         </div>
@@ -97,20 +76,41 @@
                                             class="relative zoom-in before:box before:absolute before:inset-x-3 before:mt-3 before:h-full before:bg-slate-50 before:content-['']">
                                             <div class="box p-5">
                                                 <div class="flex">
-                                                    <i data-tw-merge="" data-lucide="user"
-                                                        class="stroke-1.5 h-[28px] w-[28px] text-success"></i>
-                                                    <div class="ml-auto">
-                                                        <div data-placement="top" title="22% Higher than last month"
+                                                    <i data-tw-merge="" data-lucide="dollar-sign"
+                                                        class="stroke-1.5 h-[28px] w-[28px] text-pending"></i>
+                                                    {{-- <div class="ml-auto">
+                                                        <div data-placement="top" title="2% Lower than last month"
+                                                            class="tooltip cursor-pointer flex items-center rounded-full bg-danger py-[3px] pl-2 pr-1 text-xs font-medium text-white">
+                                                            2%
+                                                            <i data-tw-merge="" data-lucide="chevron-down"
+                                                                class="stroke-1.5 ml-0.5 h-4 w-4"></i>
+                                                        </div>
+                                                    </div> --}}
+                                                </div>
+                                                <div class="mt-6 text-3xl font-medium leading-8">Rp{{ number_format($deposit, 0, ',', '.') }}</div>
+                                                <div class="mt-1 text-base text-slate-500">Total Deposit</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="intro-y col-span-12 sm:col-span-6 xl:col-span-3">
+                                        <div
+                                            class="relative zoom-in before:box before:absolute before:inset-x-3 before:mt-3 before:h-full before:bg-slate-50 before:content-['']">
+                                            <div class="box p-5">
+                                                <div class="flex">
+                                                    <i data-tw-merge="" data-lucide="credit-card"
+                                                        class="stroke-1.5 h-[28px] w-[28px] text-warning"></i>
+                                                    {{-- <div class="ml-auto">
+                                                        <div data-placement="top" title="12% Higher than last month"
                                                             class="tooltip cursor-pointer flex items-center rounded-full bg-success py-[3px] pl-2 pr-1 text-xs font-medium text-white">
-                                                            22%
+                                                            12%
                                                             <i data-tw-merge="" data-lucide="chevron-up"
                                                                 class="stroke-1.5 ml-0.5 h-4 w-4"></i>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
-                                                <div class="mt-6 text-3xl font-medium leading-8">152.040</div>
+                                                <div class="mt-6 text-3xl font-medium leading-8">Rp{{ number_format($withdraw, 0, ',', '.') }}</div>
                                                 <div class="mt-1 text-base text-slate-500">
-                                                    Unique Visitor
+                                                    Total Withdraw
                                                 </div>
                                             </div>
                                         </div>

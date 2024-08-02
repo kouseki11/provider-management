@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('game_username');
-            $table->char('balance', 5);
+            $table->char('balance', 15);
             $table->timestamps();
         });
     }
