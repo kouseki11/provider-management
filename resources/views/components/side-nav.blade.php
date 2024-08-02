@@ -2,7 +2,8 @@
         <nav class="side-nav z-50 -mt-4 hidden w-[100px] overflow-x-hidden px-5 pb-16 pt-32 md:block xl:w-[260px]">
             <ul>
                 <li>
-                    <a href="{{ route('admin.dashboard') }}" class="side-menu {{ request()->routeIs('admin.dashboard') ? 'side-menu--active' : '' }}">
+                    <a href="{{ route('admin.dashboard') }}"
+                        class="side-menu {{ request()->routeIs('admin.dashboard') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="home" class="stroke-1.5 w-5 h-5"></i>
                         </div>
@@ -12,7 +13,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.members.index') }}" class="side-menu {{ request()->routeIs('admin.members.index') ? 'side-menu--active' : '' }}">
+                    <a href="{{ route('admin.members.index') }}"
+                        class="side-menu {{ request()->routeIs('admin.members.index') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="users" class="stroke-1.5 w-5 h-5"></i>
                         </div>
@@ -22,21 +24,24 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="side-menu">
+                    <a href="javascript:;"
+                        class="side-menu {{ request()->routeIs('admin.transactions.deposit') || request()->routeIs('admin.transactions.withdraw') ? 'side-menu--active' : '' }}">
                         <div class="side-menu__icon">
                             <i data-tw-merge="" data-lucide="shopping-bag" class="stroke-1.5 w-5 h-5"></i>
                         </div>
                         <div class="side-menu__title">
                             Transactions
-                            <div class="side-menu__sub-icon transform rotate-180">
+                            <div
+                                class="side-menu__sub-icon {{ request()->routeIs('admin.transactions.deposit') || request()->routeIs('admin.transactions.withdraw') ? 'transform rotate-180' : '' }}">
                                 <i data-tw-merge="" data-lucide="chevron-down" class="stroke-1.5 w-5 h-5"></i>
                             </div>
                         </div>
                     </a>
-                    <ul class="side-menu__sub">
+                    <ul
+                        class="{{ request()->routeIs('admin.transactions.deposit') || request()->routeIs('admin.transactions.withdraw') ? 'side-menu__sub-open' : '' }}">
                         <li>
                             <a href="{{ route('admin.transactions.deposit') }}"
-                                class="side-menu">
+                                class="side-menu {{ request()->routeIs('admin.transactions.deposit') ? 'side-menu--active' : '' }}">
                                 <div class="side-menu__icon">
                                     <i data-tw-merge="" data-lucide="dollar-sign" class="stroke-1.5 w-5 h-5"></i>
                                 </div>
@@ -46,7 +51,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('admin.transactions.withdraw') }}" class="side-menu">
+                            <a href="{{ route('admin.transactions.withdraw') }}"
+                                class="side-menu {{ request()->routeIs('admin.transactions.withdraw') ? 'side-menu--active' : '' }}">
                                 <div class="side-menu__icon">
                                     <i data-tw-merge="" data-lucide="credit-card" class="stroke-1.5 w-5 h-5"></i>
                                 </div>
